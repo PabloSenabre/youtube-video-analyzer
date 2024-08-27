@@ -1,1 +1,9 @@
 .vercel
+.DS_Store
+.env
+*.mkv
+*.mp4
+__pycache__/
+venv/
+token.json
+credentials.json
