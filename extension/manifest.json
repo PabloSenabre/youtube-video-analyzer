@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Video Analyzer",
+  "version": "1.0",
+  "description": "Analiza vídeos de YouTube",
+  "permissions": ["activeTab"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://f2fb2128-3e97-420d-be27-704821ab1083-00-23yumzih2ro83.kirk.replit.dev/"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

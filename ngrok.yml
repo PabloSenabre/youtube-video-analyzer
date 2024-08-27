@@ -1,0 +1,9 @@
+version: 2
+authtoken: 2kEYxNJfWjkJIu9YUvUmwhDZDm8_3vkoRpS24Jef4kfBfjSsS
+tunnels:
+  zapier:
+    addr: 5000
+    proto: http
+
+
+    curl -X POST https://7e06-88-17-49-173.ngrok-free.app/process_video -H "Content-Type: application/json" -d '{"video_url":"https://youtu.be/RWxz_XvPOF0?si=7atFhTqLI8YUebuE","row_id":"123"}'

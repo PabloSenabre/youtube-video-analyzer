@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Video Analyzer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>YouTube Video Analyzer</h1>
+      <label class="switch" for="darkModeToggle">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+      </label>
+    </header>
+    
+    <div class="tab-container">
+      <button class="tab-button active" data-tab="input">Entrada</button>
+      <button class="tab-button" data-tab="results">Resultados</button>
+    </div>
+
+    <div id="inputTab" class="tab-content active">
+      <div class="input-group">
+        <input type="text" id="youtube-url" placeholder="URL del video de YouTube">
+        <button id="getCurrentUrlButton" class="button secondary">Usar URL actual</button>
+      </div>
+      
+      <div class="expandable-textarea">
+        <label for="custom-prompt">Prompt Personalizado (opcional)</label>
+        <textarea id="custom-prompt" rows="2"></textarea>
+        <div id="charCount">0 / 500</div>
+      </div>
+      
+      <button id="analyze-button" class="button primary">Analizar</button>
+    </div>
+
+    <div id="resultsTab" class="tab-content">
+      <h2>Resultados del Análisis</h2>
+      <div id="resultContent"></div>
+      <button id="copyResults" class="button secondary">Copiar Resultados</button>
+    </div>
+  </div>
+  
+  <div id="loadingOverlay" class="hidden">
+    <div class="spinner"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
